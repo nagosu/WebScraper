@@ -78,11 +78,16 @@ def get_jobs_csv_by_keyword(keyword):
     file.close()  # csv 파일 닫기
 
 
-keywords = ["flutter", "nextjs", "kotlin"]
+def main():
+    keywords = ["flutter", "nextjs", "kotlin"]
 
-for keyword in keywords:
-    get_jobs_csv_by_keyword(keyword)  # 키워드로 구인공고 정보 가져오기
+    for keyword in keywords:
+        get_jobs_csv_by_keyword(keyword)  # 키워드로 구인공고 정보 가져오기
 
-browser.close()
+    browser.close()
 
-p.stop()
+    p.stop()
+
+
+if __name__ == "__main__":
+    main()
